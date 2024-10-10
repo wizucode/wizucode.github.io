@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <style>
+        body {
+            background-color: black;
+            color: pink;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h1 {
+            font-size: 40px;
+            margin-top: 50px;
+        }
+        .button {
+            background-color: pink;
+            color: black;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #ff99cc;
+        }
+        .letter-container {
+            display: none; /* Initially hidden */
+            border: 2px solid pink;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px auto;
+            width: 80%;
+            background-color: rgba(255, 192, 203, 0.3); /* Light pink background */
+            box-shadow: 0 0 15px rgba(255, 20, 147, 0.5); /* Soft shadow */
+        }
+        p {
+            font-size: 24px;
+        }
+        .cat-gif {
+            display: none; /* Initially hidden */
+            margin: 20px auto; /* Centering */
+            animation: float 2s infinite; /* Animation to make gif float */
+            width: 200px; /* Adjust size as needed */
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">Click here</h1>
+    <button class="button" onclick="showLetter()">Here</button>
+    
+    <div id="letter" class="letter-container">
+        <p>
+            HELLO LOVEEEEE imissyoy na i want your hugs narin hehehe, basic lang tignan tong code pero matagal gawin hahaha pero dw anyways iloveyou ingat ka alwaysss mwa
+        </p>
+    </div>
+
+    <!-- Using a cat GIF -->
+    <img id="cat" class="cat-gif" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cute Cat GIF">
+
+    <script>
+        function showLetter() {
+            document.getElementById('header').style.display = 'none'; // Hide the header
+            document.querySelector('.button').style.display = 'none'; // Hide the button
+            const letterContainer = document.getElementById('letter');
+            letterContainer.style.display = 'block'; // Show the letter container
+            const cat = document.getElementById('cat');
+            cat.style.display = 'block'; // Show the cat GIF
+        }
+    </script>
+</body>
+</html>
